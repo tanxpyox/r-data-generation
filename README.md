@@ -1,11 +1,16 @@
 # r-data-generation
-Two R scripts for creating large data set with significant R2 value.
+Two R scripts for creating large datasets with significant R2 values. 
 
-Note: the two scripts are to illustrate the hypothetical statistical relationship between Online forum usage `online` and the levels of Social Capital `scap`. Please change the variable names accordingly according to your own research. 
+***Note***: 
+* The two scripts are originally created to illustrate the hypothetical statistical relationship between Online forum usage `online` (the independent variable) and the levels of Social Capital `scap` (the dependent variable). Please change the variable names according to your own research. 
 
-Dependencies:
-`maptools`
-`jtools`
+***Mechanism***
+1. `gendata.R` randomly generates a small dataset with high r-squared value and low p-value.
+2. `highR2.R` generates extra data points using the principal dataset in Step 1, while maintaining its high R2 value.
 
-Citation:
-Tanxpyox (2020) R data generation script. Version 0.0.1.
+***Dependencies***:
+* `maptools`
+* `jtools`
+
+***Please cite***:
+* Tanxpyox (2020) R data generation script. Version 0.0.1.
