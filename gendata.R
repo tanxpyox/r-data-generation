@@ -8,6 +8,6 @@ while (TRUE) {                                      # Ctrl + H to change all var
   if (summary(reg)$r.squared>0.8 && summary(reg)$coefficients["online","Pr(>|t|)"]< 0.05) break
 }
 onlineb<-online                                     # creates a backup dataset; allows user to run the second part (highR2.R) multiple times without disrupting the principal dataset
-scapb<-scaps
+scapb<-scap
 effect_plot(reg, pred = online, interval = TRUE, plot.points = TRUE,x.label="Online Forum Usage (h/wk)",y.label = "Social Capital Score")
 # change x.label and y.label parameters to correct variable names
