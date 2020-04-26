@@ -13,4 +13,4 @@ Two R scripts for creating large bivariate datasets with significant R2 values.
 * `jtools`
 
 **Please cite as**:
-* Tanxpyox (2020) *R data generation script*. Version 0.0.1.
+* Koo, J (2020). *R data generation script*. Version 0.0.1.
