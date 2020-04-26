@@ -1,4 +1,4 @@
-# r-data-generation
+# r-data-generator
 Two R scripts for creating large bivariate datasets with significant R2 values. 
 
 ***Note***: 
