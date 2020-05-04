@@ -1,25 +1,27 @@
-pred <- function(x){return(summary(reg)$coefficient[[1]] + x * summary(reg)$coefficient[[2]])} #Ctrl+H to change all 'online' to correct name of IV, and 'scap' to correct name of DV
-p <- cbind(c(0,30),c(pred(0),pred(30)))   #change 0 to lower bound of X, 30 to upperbound of x
-online <- onlineb
-scap <- scapb
-for (i in 1:length(onlineb)){
-  rv<-nearestPointOnSegment(p,c(online[1],scap[1]))
-  meanx=(2*rv[[1]]+online[i])/3              #biased mean
-  distx=abs(rv[[1]]-online[i])
-  meany=(2*rv[[2]]+scap[i])/3
-  disty=abs(rv[[2]]-scap[i])
-  for (j in 1:9){                            #'9' <- (Target sample size)/(principal dataset size) - 1
-    tx=-1
-    ty=-1
-    while (tx<0||tx>30||ty<0||ty>30){        #0,30 = bounds of DV and IV respectively 
-      tx<-rnorm(1,meanx,distx/4)
-      ty<-rnorm(1,meany,disty/4)
+xvar <- xvarb
+yvar <- yvarb
+pred <- function(x){return(summary(reg)$coefficient[[1]] + x * summary(reg)$coefficient[[2]])} #Ctrl+H to change all 'xvar' to correct name of IV, and 'yvar' to correct name of DV
+p <- cbind(c(minx,maxx),c(pred(minx),pred(maxx)))   #change 0 to lower bound of X, 30 to upperbound of x
+for (i in 1:length(xvarb)){
+  rv<-nearestPointOnSegment(p,c(xvarb[i],yvarb[i]))
+  meanx=(2*rv[[1]]+xvarb[i])/3              #biased mean
+  distx=rv[[3]]
+  meany=(2*rv[[2]]+yvarb[i])/3
+  disty=rv[[3]]
+  for (j in 1:4){                            #'9' <- (Target sample size)/(principal dataset size) - 1
+    tx=-rnorm(1,meanx,distx)
+    ty=-rnorm(1,meany,disty)
+    while (tx<minx||tx>(maxx)||ty<miny||ty>(maxy)){        #0,30 = bounds of DV and IV respectively 
+      tx<-rnorm(1,meanx,distx)
+      ty<-rnorm(1,meany,disty)
+      print(c(tx, ty))
     }
-    online<-c(online,tx)
-    scap<-c(scap,ty)
+    xvar<-c(xvar,tx)
+    yvar<-c(yvar,ty)
   }
 }
-reg<-lm(scap~online)
-print(c(summary(reg)$r.squared,summary(reg)$coefficients["online","Pr(>|t|)"]))
-effect_plot(reg, pred = online, interval = TRUE, plot.points = TRUE,x.label="Online Forum Usage (h/wk)",y.label = "Social Capital Score")
+reg<-lm(yvar~xvar)
+effect_plot(reg, pred = xvar, interval = TRUE, plot.points = TRUE,x.label=paste(xlabel,xunits,sep=" "),y.label = paste(ylabel,xunits,sep=" "),main.title=graphtitle)
+stargazer(reg,type="html",out = "out.html",dep.var.labels = ylabel,covariate.labels = xlabel,style = "all")
+print(c(summary(reg)$r.squared,summary(reg)$coefficients["xvar","Pr(>|t|)"]))
 #change x.label, y.label parameters to correct DV/IV names
