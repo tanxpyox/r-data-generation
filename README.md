@@ -1,5 +1,5 @@
 # r-data-generator
-Two sets of R scripts for creating statistically significant and insignificant data illustrations for bivariate regressions, difference-of-means tests.
+Two sets of R scripts for creating statistically significant data illustrations for bivariate regressions and difference-of-means tests.
 
 ## File Description
 1. `reg/preamble-reg.R` defines the parameters for the scripts in this package. Change the variables accordingly to match your own research
