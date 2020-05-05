@@ -17,7 +17,7 @@ Two sets of R scripts for creating statistically significant and insignificant d
   * `maptools`
   * `jtools`
   * `stargazer`
-* Bar graph package Dependencies (run `reg/dependencies-setup-b.R` to install and setup)
+* Bar graph package Dependencies (run `bar/dependencies-setup-b.R` to install and setup)
   * `ggplot2`
   * `dplyr`
   * `pander`
