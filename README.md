@@ -28,10 +28,13 @@ Two sets of R scripts for creating statistically significant and insignificant d
 
 ## Q&A
 Why create this script? Is this created to do sketchy stuff?
-* A: No, this was originally created to complete my politics coursework, which required me to present two different hypothetical datasets, where I (i) fail to reject or (ii) can reject with confidence the null hypothesis.
+* A: No, this was originally created to complete my politics coursework, which required me to present two different hypothetical datasets, where I (i) fail to reject or (ii) can reject with confidence the null hypothesis. I ask that all users of this script to abide by the academic standards of ethics and *indicate that the dataset is only hypothetical and created for illustration.*
 
 Will more data patterns be added?
 * A: Sure, leave your suggestions in the issues tab
 
-Will this be available as a package?
-* A: I currently have no plans of making this into a package, partly because this code is still very crude and will need some major rewriting to accomodate for all possible users. So, currently no, but in the future, maybe.
+Will this be available as a R package?
+* A: I currently have no plans of making this into a package, partly because this code is still very crude and will need some major rewriting to accomodate for all possible users.--But, maybe with your help, I can!
+
+## Licence
+* The scripts in this repo are released under the GPL 3.0 licence. See LICENSE for the full terms and conditions.
