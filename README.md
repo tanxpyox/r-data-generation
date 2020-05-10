@@ -5,12 +5,12 @@ Two sets of R scripts for creating statistically significant data illustrations 
 1. `reg/preamble-reg.R` defines the parameters for the scripts in this package. Change the variables accordingly to match your own research
 2. `reg/null-reg.R` generates a dataset where there is no significant relationship between the two variables
 3. `reg/datagen-reg.R` randomly generates a 20-point dataset with high r-squared value and low p-value.
-4. `reg/interpolate-reg.R` generates 80 extra data points using the principal dataset in Step 1, while maintaining its high R2 value. (this part is deliberately separated from step 3 for the user to test different interpolation models without resetting the principal dataset)
-5. `reg/combined-reg.R` combines (3) and (4) for those who don't want the hassle of running two separate scripts.
+4. `reg/interpolate-reg.R` generates `Sample size - 20` extra data points using the principal dataset in Step 1, while maintaining its high R2 value. (this part is deliberately separated from step 3 for the user to test different interpolation models without resetting the principal dataset)
+5. `reg/combined-reg.R` combines (3) and (4) for those who do not want the hassle of running two separate scripts.
 ---
 1. `bar/preamble-b.R` defines the parameters for scripts for this package. Change the variables accordingly to match your own research
 2. `bar/null-b.R` generates a bar graph where no significant difference is detected across the groups
-3. `bar/sig-b.R` generates a bar graph with significant differences in the means of the data groups. Averages are sorting in ascending order, according to the order that the groups are defined in the `xlabels` parameter.
+3. `bar/sig-b.R` generates a bar graph with significant differences in the means of the data groups. Averages are sorted in ascending order, according to the order that the groups are defined in the `xlabels` parameter.
 
 ## Dependencies:
 * Regression package dependencies (run `reg/dependencies-setup-reg.R` to install and setup)
