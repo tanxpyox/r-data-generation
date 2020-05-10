@@ -1,5 +1,5 @@
-xvar<-sample(1:((maxx-minx)*100),size=100,replace=TRUE)       #'3000' --> change to max(x)*1000
-yvar<-sample(1:((maxy-miny)*100),size=100,replace=TRUE)         #'3000' --> change to max(y)*1000
+xvar<-sample(1:((maxx-minx)*100),size=samplesize,replace=TRUE)       #'3000' --> change to max(x)*1000
+yvar<-sample(1:((maxy-miny)*100),size=samplesize,replace=TRUE)         #'3000' --> change to max(y)*1000
 xvar<-xvar/100+minx
 yvar<-yvar/100+miny
 reg<-lm(yvar~xvar)

@@ -11,6 +11,8 @@ yunits="(units/week)"              #Unit of DV (for the graph only)
 #default= set to be 'DV aginst IV' (for graph only)
 graphtitle<-paste(ylabel,"against",xlabel,sep=" ")
 
+samplesize=100
+
 positive=FALSE                     #TRUE = the target is a positive relationship
 
 minx=0                             #[minx,maxx] = the range of X

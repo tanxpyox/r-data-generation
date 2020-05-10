@@ -18,7 +18,7 @@ for (i in 1:length(xvarb)){
   distx=rv[[3]]
   meany=(2*rv[[2]]+yvarb[i])/3
   disty=rv[[3]]
-  for (j in 1:4){
+  for (j in 1:(samplesize/20 - 1)){
     tx=-rnorm(1,meanx,distx)
     ty=-rnorm(1,meany,disty)
     while (tx<minx||tx>(maxx)||ty<miny||ty>(maxy)){
