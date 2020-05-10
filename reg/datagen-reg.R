@@ -12,4 +12,4 @@ xvarb<-xvar
 yvarb<-yvar
 
 # graph is generated using jtools::effect_plot()
-effect_plot(reg, pred = xvar, interval = TRUE, plot.points = TRUE,x.label=paste(xlabel,xunits,sep=" "),y.label = paste(ylabel,xunits,sep=" "),main.title=graphtitle)
+effect_plot(reg, pred = xvar, interval = TRUE, plot.points = TRUE,x.label=paste(xlabel,xunits,sep=" "),y.label = paste(ylabel,yunits,sep=" "),main.title=graphtitle)

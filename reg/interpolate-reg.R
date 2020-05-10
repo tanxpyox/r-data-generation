@@ -26,7 +26,7 @@ for (i in 1:length(xvarb)){
   }
 }
 reg<-lm(yvar~xvar)
-effect_plot(reg, pred = xvar, interval = TRUE, plot.points = TRUE,x.label=paste(xlabel,xunits,sep=" "),y.label = paste(ylabel,xunits,sep=" "),main.title=graphtitle)
+effect_plot(reg, pred = xvar, interval = TRUE, plot.points = TRUE,x.label=paste(xlabel,xunits,sep=" "),y.label = paste(ylabel,yunits,sep=" "),main.title=graphtitle)
 
 #regression table created by stargazer::stargazer()
 stargazer(reg,type="html",out = "out.html",dep.var.labels = ylabel,covariate.labels = xlabel,style = "all")
