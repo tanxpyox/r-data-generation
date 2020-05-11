@@ -24,7 +24,7 @@ Two sets of R scripts for creating statistically significant data illustrations 
   * `Pandoc` (requires restart after install)
 
 ## Please cite as:
-* Koo, J (2020). *R data generation script*. Version 0.0.3. (Available at: https://github.com/tanxpyox/r-data-generator)
+* Koo, J (2020). *R data generator*. R package version 0.0.3. Available online at: https://github.com/tanxpyox/r-data-generator.
 
 ## Q&A
 Why create this script? Is this created to do sketchy stuff?
