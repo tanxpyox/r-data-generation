@@ -37,7 +37,7 @@ Will more data patterns be added?
 * A: Sure, leave your suggestions in the issues tab.
 
 Will this be available as an R package?
-* A: I currently have no plans of making this into a package, partly because this code is still very crude and will need some major rewriting to accomodate for all possible users.--But, maybe with your help, maybe I can!
+* A: I currently have no plans of making this into a package, partly because this code is still very crude and will need some major rewriting to accomodate for all possible users.--But, with your help, maybe I can!
 
 ## Licence
 * The scripts in this repo are released under the GPL 3.0 licence. See LICENSE for the full terms and conditions.
